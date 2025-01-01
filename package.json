@@ -1,0 +1,57 @@
+{
+    "name": "@naylour/telegram",
+    "module": "dist/index.js",
+    "version": "1.0.0",
+    "private": false,
+    "type": "module",
+    "author": {
+        "email": "ShahTheShah@ya.ru",
+        "name": "Naylour",
+        "url": "https://github.com/naylour"
+    },
+    "bugs": {},
+    "categories": ["Other"],
+    "exports": {
+        ".": {
+            "default": "./dist/index.js",
+            "import": "./dist/index.js",
+            "types": "./dist/index.d.ts"
+        },
+        "./types": {
+            "types": "./dist/Telegram.d.ts"
+        },
+        "./reactivity": {
+            "default": "./dist/reactivity.svelte.js",
+            "import": "./dist/reactivity.svelte.js",
+            "types": "./dist/reactivity.svelte.d.ts"
+        }
+    },
+    "devDependencies": {
+        "@types/bun": "latest",
+        "@types/node": "^22.10.3",
+        "terser": "^5.37.0",
+        "vite": "^6.0.6",
+        "vite-plugin-dts": "^4.4.0"
+    },
+    "peerDependencies": {
+        "typescript": "^5.0.0",
+        "svelte": "^5.16.0"
+    },
+    "dependencies": {},
+    "scripts": {
+        "package": "bun --bun vite build",
+        "publicate": "bun publish --access public"
+    },
+    "files": [
+        "dist",
+        "!dist/**/*.test.*",
+        "!dist/**/*.spec.*"
+    ],
+    "keywords": [
+        "telegram",
+        "telegram-api",
+        "svelte",
+        "svelte-5"
+    ],
+    "pricing": "Free"
+}
