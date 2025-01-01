@@ -1,7 +1,8 @@
 {
     "name": "@naylour/telegram",
-    "module": "dist/index.js",
+    "module": "./dist/index.js",
     "version": "1.0.0",
+    "types": "./dist/index.d.ts",
     "private": false,
     "type": "module",
     "author": {
@@ -9,21 +10,31 @@
         "name": "Naylour",
         "url": "https://github.com/naylour"
     },
-    "bugs": {},
+    "repository": {
+        "type": "git",
+        "directory": "/",
+        "url": "https://github.com/naylour/NaylourTelegram.git"
+    },
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/naylour/NaylourTelegram/issues",
+        "email": "ShahTheShah@ya.ru"
+    },
     "categories": ["Other"],
     "exports": {
         ".": {
-            "default": "./dist/index.js",
             "import": "./dist/index.js",
-            "types": "./dist/index.d.ts"
+            "types": "./dist/index.d.ts",
+            "default": "./dist/index.js"
         },
         "./types": {
-            "types": "./dist/Telegram.d.ts"
+            "types": "./dist/Telegram.d.ts",
+            "default": "./dist/Telegram.d.ts"
         },
         "./reactivity": {
-            "default": "./dist/reactivity.svelte.js",
             "import": "./dist/reactivity.svelte.js",
-            "types": "./dist/reactivity.svelte.d.ts"
+            "types": "./dist/reactivity.svelte.d.ts",
+            "default": "./dist/reactivity.svelte.js"
         }
     },
     "devDependencies": {
@@ -37,7 +48,9 @@
         "typescript": "^5.0.0",
         "svelte": "^5.16.0"
     },
-    "dependencies": {},
+    "dependencies": {
+        "esm-env": "^1.2.1"
+    },
     "scripts": {
         "package": "bun --bun vite build",
         "publicate": "bun publish --access public"
